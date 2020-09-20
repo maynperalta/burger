@@ -40,14 +40,14 @@ const DB = {
         });
     },
     update: (table, objColVals, condition, cb) => {
-        var queryString = "UPDATE " + table + "SET" + objToSql(objColVals) + " WHERE " + condition;
-        connection.queryString(queryString, function(err, result) {
+        var queryString = "UPDATE " + table + " SET " + objToSql(objColVals) + " WHERE " + condition;
+        connection.query(queryString, function(err, result) {
             if(err) throw err;
             cb(result);
         });
     },
     delete: (table, condition, cb) => {
-        var queryString = "DELETE FROM " + table + "WHERE" + condition;
+        var queryString = "DELETE FROM " + table + " WHERE " + condition;
         connection.query(queryString, function(err, result) {
             if(err) throw err;
             cb(result);

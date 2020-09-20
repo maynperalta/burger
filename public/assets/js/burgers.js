@@ -22,7 +22,7 @@ $(function() {
         var devouredState ={
             devoured: 1
         };
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredState
         }).then(function() {
@@ -37,7 +37,7 @@ $(".delete").on("click", function(event) {
     var id = $(this).data("id");
     $.ajax({
         type: "DELETE",
-        url: "/api/burgers" + id
+        url: "/api/burgers/" + id
     }).then(
         function() {
             console.log("Deleted burger", id);
