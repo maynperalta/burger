@@ -23,7 +23,6 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-
 const DB = {
     create: (table, cols, vals, cb) => {
         var queryString = "INSERT INTO " + table + " (" + cols.toString() + ") " + "VALUES (" + printQuestionMarks(vals.length) + ") ";

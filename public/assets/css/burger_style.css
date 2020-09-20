@@ -12,6 +12,7 @@ body {
 .container {
     background-color: rgb(230, 230, 230, 0.95);
     padding: 20px;
+    margin-top: 10px;
 }
 
 .jumbotron {
@@ -33,6 +34,7 @@ ul {
     max-width: 90%;
     justify-content: center;
 }
+
 li {
     padding: 5px;
 }
@@ -59,4 +61,3 @@ button:hover {
 .fas {
     padding: 5px;
 }
-
