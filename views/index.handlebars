@@ -1,7 +1,7 @@
 <div class="container">
     <div class="jumbotron justify-content-center">
         <img src="/assets/img/Burger-PNG.png" alt="Burger">
-        <h1>Have A Burger</h1>
+        <h1>Eat Da Burger!</h1>
 
 
     </div>
@@ -11,8 +11,8 @@
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <strong>{{this.burger_name}}</strong>
-                <button type="button" class="devour" data-id="{{this.id}}">Devour</button>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><strong>{{this.burger_name}}</strong>
+                <button type="button" class="devour" data-id="{{this.id}}">Devour It!<i class="fas fa-utensils"></i></button></li>
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -22,8 +22,8 @@
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <strong>{{this.burger_name}}</strong>
-                <button type="button" class="delete" data-id="{{this.id}}">Delete</button>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><strong>{{this.burger_name}}</strong>
+                <button type="button" class="delete" data-id="{{this.id}}">Delete!<i class="fas fa-trash-alt"></i></button></li>
                 {{/if}}
                 {{/each}}
             </ul>
@@ -36,9 +36,9 @@
         <form class="create-form">
             <div class="form-group">
                 <label for="newBurger">My Burger:</label>
-                <input type="text" id="newBurger" name="burger">
+                <input type="text" id="newBurger" name="burger"><button type="submit">Order!<i class="fas fa-hamburger"></i></button>
             </div>
-            <button type="submit">Add Burger!</button>
+            
         </form>
     </div>
 </div>
