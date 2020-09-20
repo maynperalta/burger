@@ -3,7 +3,7 @@ $(function() {
         event.preventDefault();
 
         var newBurger ={
-            name: $("#newBurger").val().trim(),
+            burger_name: $("#newBurger").val().trim(),
             devoured: 0
         };
 //POST request for a new burger
@@ -30,7 +30,7 @@ $(function() {
             location.reload();
         });
     });
-});
+
 
 $(".delete").on("click", function(event) {
     event.preventDefault();
@@ -38,5 +38,11 @@ $(".delete").on("click", function(event) {
     $.ajax({
         type: "DELETE",
         url: "/api/burgers" + id
-    }).then(location.reload());
+    }).then(
+        function() {
+            console.log("Deleted burger", id);
+            location.reload()
+        });
+});
+
 });

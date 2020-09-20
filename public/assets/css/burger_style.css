@@ -1,0 +1,29 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-image: url(/assets/img/diner.jpeg);   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.container {
+    background-color: rgb(230, 230, 230, 0.95);
+    padding: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    color: black;
+    border-radius: 0;
+    background: none;
+    width: auto;
+    padding: 10px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
