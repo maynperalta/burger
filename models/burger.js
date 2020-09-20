@@ -22,5 +22,5 @@ var burger = {
         });
     }
 };
-
+//Export for use by burger_controller.js
 module.exports = burger;

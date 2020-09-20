@@ -6,7 +6,7 @@ $(function() {
             name: $("#newBurger").val().trim(),
             devoured: 0
         };
-
+//POST request for a new burger
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
