@@ -1,3 +1,4 @@
+//File added to handle POST, PUT, and DELETE requests.
 $(function() {
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
@@ -16,6 +17,7 @@ $(function() {
                 location.reload();
             });
     });
+//PUT request to change devoured state of burger.    
     $(".devour").on("click", function(event) {
         event.preventDefault();
         var id = $(this).data("id");
@@ -31,7 +33,7 @@ $(function() {
         });
     });
 
-
+//DELETE request to remove burger from 'Devoured' list
 $(".delete").on("click", function(event) {
     event.preventDefault();
     var id = $(this).data("id");

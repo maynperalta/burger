@@ -1,6 +1,6 @@
 //Import MySQL
 var mysql = require("mysql");
-//Set up connection
+//Set up connection for localhost and Heroku with MySQL database
 var connection;
 
 if (process.env.JAWSDB_URL) {
